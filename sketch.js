@@ -32,23 +32,23 @@ box.velocityY= 3;
 function draw() {
     background(rgb(169,169,169));
     //create edgeSprite
-createEdgeSprites();
+edges = createEdgeSprites();
 box.bounceOff(edges);
 
-
     //add condition to check if box touching surface and make it box
-if(surface1.isTouching(box) && box.bouceOff(surface1)){
-    box.shapeColor= "blue";
+if(surface1.isTouching(box) && box.bounceOff(surface1)){
+    box.shapeColor = "blue";
 }
-if(surface2.isTouching(box) && box.bouceOff(surface2)){
-    box.shapeColor= "white";
+if(surface2.isTouching(box) && box.bounceOff(surface2)){
+    box.shapeColor = "yellow";
     box.setVelocity(0,0);
+    music.stop();
 }
-if(surface3.isTouching(box) && box.bouceOff(surface3)){
-    box.shapeColor= "red";
+if(surface3.isTouching(box) && box.bounceOff(surface3)){
+    box.shapeColor = "red";
 }
-if(surface4.isTouching(box) && box.bouceOff(surface4)){
-    box.shapeColor= "green";
+if(surface4.isTouching(box) && box.bounceOff(surface4)){
+    box.shapeColor = "green";
 }
 
     drawSprites();
